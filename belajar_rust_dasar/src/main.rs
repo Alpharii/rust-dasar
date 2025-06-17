@@ -130,4 +130,25 @@ fn boolean_operator(){
     println!("{}", lulus_final)
 }
 
+//char
+#[test]
+fn char_type(){
+    let char1 = 'a';
+    let char2 = 'b';
+
+    println!("{} {}", char1, char2);
+}
+
 //compound type
+
+//tuple
+#[test]
+fn tuple_test(){
+    let data: (i32, f64, bool) = (10, 10.5, true);
+    println!("{:?}", data);
+
+    let a = data.0;
+    let b = data.1;
+    let c = data.2;
+    println!("{} {} {}", a, b ,c);
+}
