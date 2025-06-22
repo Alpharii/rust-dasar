@@ -152,3 +152,110 @@ fn tuple_test(){
     let c = data.2;
     println!("{} {} {}", a, b ,c);
 }
+
+//destructuring tuple
+#[test]
+fn destructuring_tuple(){
+    let data: (i32, f64, bool) = (10, 10.5, true);
+    println!("{:?}", data);
+
+    let (a,b,c) = data;
+    println!("{} {} {}", a, b ,c);
+}
+
+//mutable tuple
+#[test]
+fn mutable_tubple(){
+    let mut data: (i32, f64, bool) = (10, 10.5, true);
+    println!("{:?}", data);
+
+    let (a,b,c) = data;
+    println!("{} {} {}", a, b ,c);
+
+    data.0 = 20;
+    data.1 = 20.5;
+    data.2 = false;
+    println!("{:?}", data);
+}
+
+//unit (tuple kosong)
+fn unit(){
+    println!("Hello")
+}
+
+#[test]
+fn test_unit(){
+    let result = unit();
+    println!("{:?}", result);
+
+    let test = ();
+    println!("{:?}", test);
+}
+
+//array
+#[test]
+fn test_array(){
+    let arr: [i32; 5] = [1,2,3,4,5];
+    println!("{:?}",arr);
+}
+
+//acces array
+#[test]
+fn acces_array(){
+    let arr: [i32; 5] = [1,2,3,4,5];
+    println!("{:?}",arr);
+
+    let a = arr[0];
+    let b = arr[1];
+    println!("{} {}", a, b);
+}
+
+//mutable array
+#[test]
+fn mutable_array(){
+    let mut arr: [i32; 5] = [1,2,3,4,5];
+    println!("{:?}",arr);
+
+    let a = arr[0];
+    let b = arr[1];
+    println!("{} {}", a, b);
+
+    arr[0] = 10;
+    arr[1] = 20;
+    println!("{:?}",arr);
+}
+
+//hitung panjang array
+#[test]
+fn array_length(){
+    let mut arr: [i32; 5] = [1,2,3,4,5];
+    println!("{:?}",arr);
+
+    let a = arr[0];
+    let b = arr[1];
+    println!("{} {}", a, b);
+
+    arr[0] = 10;
+    arr[1] = 20;
+    println!("{:?}",arr);
+
+    let length: usize = arr.len();
+    println!("{:?}", length);
+}
+
+//two dimensional array
+#[test]
+fn two_dimension_array(){
+    let matrix: [[i32; 3]; 2] = [
+        [1,2,3],
+        [4,5,6],
+    ];
+
+    println!("{:?}", matrix);
+    println!("{:?}", matrix[0]);
+    println!("{:?}", matrix[1]);
+    println!("{}", matrix[0][0]);
+    println!("{}", matrix[0][1]);
+    println!("{}", matrix[1][0]);
+    println!("{}", matrix[1][1]);
+}
