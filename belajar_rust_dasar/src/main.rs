@@ -259,3 +259,26 @@ fn two_dimension_array(){
     println!("{}", matrix[1][0]);
     println!("{}", matrix[1][1]);
 }
+
+//constant
+const MAXIMUM: i32 = 100;
+#[test]
+fn constant_test(){
+    const MINIMUM: i32 = 0;
+    println!("{} {}", MAXIMUM, MINIMUM)
+}
+
+//variable scope
+#[test]
+fn variable_scope(){
+    let eko = 1;
+
+    //inner scope
+    {
+        println!("inner eko: {}", eko);
+        let kurniawan = 2;
+        println!("inner kurniawan: {}", kurniawan);
+    }
+
+    // println!("inner kurniawan: {}", kurniawan); //error
+}
